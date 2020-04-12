@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Строитель</title>
+    <script type="text/javascript">
+        var builder = new Object();
+        builder.createRoof = function () {
+            document.write("<img src='resources/Roof.gif'/><br/>");
+        };
+        builder.createFirstFloor = function () {
+            document.write("<img src='resources/FirstFloor.gif'/><br/>");
+        };
+        builder.createSecondFloor = function () {
+            document.write("<img src='resources/SecondFloor.gif'/><br/>");
+        };
+        builder.createBasement = function () {
+            document.write("<img src='resources/Basement.gif'/><br/>");
+        };
+        // Строительство дома.
+        builder.createRoof();
+        builder.createSecondFloor();
+        builder.createFirstFloor();
+        builder.createBasement();
+    </script>
+</head>
+<body>
+</body>
+</html>

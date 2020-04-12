@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>no ** args</title>
+            <script type="text/javascript">
+                function print(msg, count = 3) {
+ 
+                    for (var i = 0; i < count; i++) {
+                        document.write("<p>" + msg);
+                    }
+
+                    document.write("<hr/>");
+                }
+
+                print("hello");
+                print("world", 7);
+            </script>
+        
+    </head>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вложенные обьекты</title>
+    <script type="text/javascript">
+        var human = {
+            firstName: "Alex",
+            secondName: "Jazun",
+            age: 27,
+            // Вложенный обьект.
+            occupation: "<img src='Images_LR7/Microsoft.jpg' width='152 height='38",
+
+           show: function () {
+               document.write("<p>First name: " + human.firstName);
+               document.write("<p>Second name: " + human.secondName);
+               document.write("<p>Age: " + human.age + " years old");
+               document.write(this.occupation + "<hr/>");
+           },
+            changeWork: function (occupation) {
+                this.occupation = occupation;
+            }
+        };
+        human.show();
+        human.changeWork("<img src='Images_LR7/CyberBionic Systematics.jpg'/>");
+        human.show();
+    </script>
+</head>
+<body>
+</body>
+</html>

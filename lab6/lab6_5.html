@@ -1,0 +1,70 @@
+<html lang="ru">
+<head>
+    <title>Operator return</title>
+    <script type="text/javascript">
+        function add(a, b) {
+            return a + b;
+        }
+        function sub(a, b) {
+            return a - b;
+        }
+        function mul(a, b) {
+            return a * b;
+        }
+
+        function div(a, b) {
+            return a / b;
+        }
+
+        function sqrt(a) {
+            return Math.sqrt(a);
+        }
+        function pow(a) {
+            return Math.pow(a, 2);
+        }
+        var operand1 = prompt("Введите первое число: ");
+        var sign = prompt("Введите знак арифметической операции: + - * / ^ sqrt");
+        console.log(typeof sign);
+        if (sign !== "^" && sign !== "sqrt"){
+            var operand2 = prompt("Введите второе число: ");
+            operand2 = parseInt(operand2);//глобальный метод parseInt
+        }
+       
+        var result = undefined;
+
+        operand1 = parseInt(operand1);//глобальный метод parseInt
+       
+        switch (sign) {
+            case "+":
+                result = add(operand1, operand2);
+                break;
+            case "-":
+                result = sub(operand1, operand2);
+                break;
+            case "*":
+                result = mul(operand1, operand2);
+                break;
+            case "/":
+                result = div(operand1, operand2);
+                break;
+            case "^":
+                result = pow(operand1);
+                break;
+            case "sqrt":
+                result = sqrt(operand1);
+                break;
+            default:
+                document.write("<p><b style='color:red'>" + sign + "</b> - не является знаком арифметической операции.");
+        }
+
+        if (result !== undefined)
+            if(sign !== "^" && sign !== "sqrt")
+                document.write("<p>" + operand1 + " " + sign + " " + operand2 + " = " + result);
+            else
+                document.write("<p>" + operand1 + " " + sign + " = " + result);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

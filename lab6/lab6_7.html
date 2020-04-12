@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Массив Аргументов arguments</title>
+
+    <script type="text/javascript">
+      function f(a, b, c) {
+          if(arguments.length != 3) {
+              document.write("<p><b style='coloe:red;'>ERROR:</b> <em>Need 3 args. Func is called with " + arguments.length + "params!</em>");
+          }
+          else {
+              document.write("<p><b style='color:green;'>Right.</b> Args: ");
+                for (var i = 0; i < arguments.length; i++)
+                document.write(arguments[i] + ", ");
+          }
+      }
+      f(1, 2, 3, 4);
+      f(1, 2, 3);
+      f(1, 2)
+    </script>
+  </head>
+  <body></body>
+</html>
